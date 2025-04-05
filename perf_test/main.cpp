@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <x86intrin.h>
 #include <sched.h>
