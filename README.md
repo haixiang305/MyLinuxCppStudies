@@ -16,7 +16,7 @@ My learning path for C++ programming under Linux environments.
 ## new_features
 * PC1: Ubuntu 22.04.5 LTS OS, 11th Gen Intel® Core™ i5-11400H CPU @ 2.70GHz × 6
 * Tools used: VSCode, g++, gdb
-* This folder includes C++ later standard features related tests.
+* This folder includes C++ 14 and later standard features related tests.
 ## ci_cd
 * PC1: Ubuntu 22.04.5 LTS OS, 11th Gen Intel® Core™ i5-11400H CPU @ 2.70GHz × 6
 * PC2: Linux Mint 22.1 Cinnamon, Intel© Core™ i5-1035G7 CPU @ 1.20GHz × 4
