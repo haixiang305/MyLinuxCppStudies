@@ -5,6 +5,7 @@
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
+                "-std=c++23", // Add this flag to enable C++23 support
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
@@ -25,6 +26,7 @@
             "label": "C/C++: g++-13 build active file",
             "command": "/usr/bin/g++-13",
             "args": [
+                "-std=c++23", // Add this flag to enable C++23 support
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
