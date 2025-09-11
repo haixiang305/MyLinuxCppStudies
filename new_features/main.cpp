@@ -31,6 +31,13 @@ T add(T a, T b)
     return a + b;
 };
 
+consteval int multiply(int a, int b) 
+{
+    return a * b;
+};
+
+constinit int arr[] = {1, 2, 3};
+
 int main()
 {
     // C++14
@@ -111,8 +118,11 @@ int main()
     }
 
     // 3. std::span
-    std::span<int> span{vec};
-    std::cout << "C++20: std::span: " << span.size() << std::endl;
+    std::span<int> span { vec.begin() + 2, 3 };
+    for (auto i : span)
+    {
+        std::cout << "C++20: std::span: " << i << std::endl;
+    }
 
     // 4. std::format
     std::string formatted = std::format("C++20: std::format: {}", 42);
@@ -144,9 +154,14 @@ int main()
     float float_value = std::bit_cast<float>(value);
     std::cout << "C++20: std::bit_cast: " << float_value << std::endl;
 
+    // 8. consteval
+    constexpr int mul = multiply(2, 3);
+    static_assert(mul == 6);
+    std::cout << "C++20: consteval: " << mul << std::endl;
+
     // C++23
     // 1. std::expected
-    std::expected<int, std::string> res(42);
+    std::expected<int, std::string> res = std::unexpected("no result");
     if (res)
     {
         std::cout << "C++23: std::expected: " << *res << std::endl;
